@@ -66,6 +66,11 @@ function createRandomCircle() {
   circle.style.height = `${size}px`
   circle.style.top = `${y}px`
   circle.style.left = `${x}px`
+  circle.style.background =
+    '#' +
+    Math.floor(Math.random() * 2 ** 24)
+      .toString(16)
+      .padStart(0, 6)
 
   board.append(circle)
 }
